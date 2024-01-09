@@ -5,38 +5,100 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
+.Card {
   padding: 2em;
 }
+.Card__Bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: solid 1px green;
+  border-radius: 5px;
+}
+.TextField {
+  margin: 10px 0;
+  height: 30px;
+  border-radius: 5px;
+  border: solid 1px #eee;
+}
 
-.read-the-docs {
-  color: #888;
+.TodoContainer {
+  width: 400px;
+  border: solid 1px #eee;
+  border-radius: 5px;
+  height: 500px;
+}
+.List__Container {
+  height: 400px;
+  scroll-behavior: smooth;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.List {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  border: 1px solid #eee;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.Button {
+  appearance: none;
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.Button:hover {
+  background-color: #f3f4f6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.Button:disabled {
+  background-color: #fafbfc;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959da5;
+  cursor: default;
+}
+
+.Button:active {
+  background-color: #edeff2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.Button:focus {
+  outline: 1px transparent;
+}
+
+.Button:before {
+  display: none;
+}
+
+.Button:-webkit-details-marker {
+  display: none;
 }

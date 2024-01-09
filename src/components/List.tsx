@@ -33,15 +33,28 @@ export const List = ({
   }
 
   return (
-    <div>
+    <div className="List__Container">
       {list.map((el) => (
-        <div key={el.id}>
-          {el.content}
-          <CheckBox
-            isComplete={el.isComplete}
-            onChange={() => handleChange(el)}
-          />
-          <Trash setList={setList} list={list} index={el.id} />
+        <div key={el.id} className="List">
+          <span
+            className="List__Content"
+            style={
+              el.isComplete
+                ? { textDecoration: "line-through", opacity: "0.5" }
+                : {}
+            }
+          >
+            {el.content}
+          </span>
+
+          <div>
+            <CheckBox
+              isComplete={el.isComplete}
+              onChange={() => handleChange(el)}
+            />
+
+            <Trash setList={setList} list={list} index={el.id} />
+          </div>
         </div>
       ))}
     </div>
