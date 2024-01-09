@@ -10,7 +10,10 @@ function App() {
   const [list, setList] = useState<ListProp[]>([])
 
   const handleSave = () => {
-    const newList = [...list, { content: input, id: Math.random() }]
+    const newList = [
+      ...list,
+      { content: input, id: Math.random(), isComplete: false },
+    ]
 
     setList(newList)
 
