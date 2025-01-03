@@ -1,4 +1,4 @@
-# TODO App tutorial
+# TODO App
 
 To-do list app tutorial ([tuto45](https://tutorial45.com/build-a-todo-list-app/))
 
